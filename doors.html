@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title>Изделия из дерева</title>
+</head>
+<body>
+    <div class="zagolovok" align="center"><b>ИЗДЕЛИЯ ИЗ ДЕРЕВА</b></div>
+<div class="toolbar">
+	<div class="plitka"><a href="startpage.html">ГЛАВНАЯ</a></div>
+	<div class="plitka active catalog">
+    КАТАЛОГ
+		<div class="hidden-items">
+				<div class="plitka active"><a href="doors.html">Двери</a></div>
+			<div class="plitka"><a href="frames.html">Рамы</a></div>
+			<div class="plitka"><a href="staircase.html">Лестницы</a></div>
+			<div class="plitka"><a href="tables.html">Столы</a></div>
+			<div class="plitka"><a href="lavochki.html">Лавки</a></div>
+			<div class="plitka"><a href="chairs.html">Стулья</a></div>
+			<div class="plitka">Погонаж
+				<div class="submunu1">
+					<div class="plitka"><a href="blockhouse.html">Блок-хаус</a></div>
+					<div class="plitka"><a href="lining.html">Вагонка</a></div>
+					<div class="plitka"><a href="floorboard.html">Половая доска</a></div>
+					<div class="plitka"><a href="baseboard.html">Плинтус</a></div>
+					<div class="plitka"><a href="doorjamb.html">Наличник</a></div>
+					<div class="plitka"><a href="imitation-timber.html">Имитация бруса</a></div>
+					<div class="plitka"><a href="planken.html">Планкен</a></div>
+					<div class="plitka"><a href="shields-40-mm.html">Щиты 40 мм</a></div>
+				</div>
+			</div>	
+			<div class="plitka">Для бань и саун
+				<div class="submunu1">
+					<div class="plitka"><a href="ladles.html">Ковши</a></div>
+					<div class="plitka"><a href="traps.html">Трапы</a></div>
+					<div class="plitka"><a href="lamps.html">Светильники</a></div>
+					<div class="plitka"><a href="deckchairs.html">Шезлонги</a></div>
+					<div class="plitka"><a href="salt.html">Гималайская соль<a></div>
+					<div class="plitka"><a href="headrests.html">Подголовники</a></div>
+					<div class="plitka"><a href="mugs.html">Кружки</a></div>
+					<div class="plitka"><a href="dousing-buckets.html">Вёдра-обливайки</a></div>
+				</div>		
+		</div>
+		</div>
+	</div>
+	<div class="plitka"><a href="address.html">АДРЕС</a></div>
+	<div class="plitka"><a href="contacts.html">КОНТАКТЫ</a></div>
+	<div class="plitka">ПОИСК</div>
+</div>
+
+
+    <div class="margins">
+        <div class="heading">Двери</div>
+		
+		<script>//ИНТЕРВАЛЫ МЕЖДУ КАРТОЧКАМИИИИ
+document.addEventListener("DOMContentLoaded", function() {
+    const container = document.querySelector('.cards-grid');
+    const style = getComputedStyle(container);
+    let gap = 20; // Значение по умолчанию
+
+    if (style.justifyContent === 'space-around') {
+        // Если у контейнера установлен justifyContent: space-around, вычисляем gap
+        const items = container.children;
+        if (items.length > 1) {
+            const firstItemRect = items[0].getBoundingClientRect();
+            const secondItemRect = items[1].getBoundingClientRect();
+            gap = (secondItemRect.left - firstItemRect.right) / 2;
+        }
+    }
+
+    // Устанавливаем половинное значение gap в CSS custom properties
+    document.documentElement.style.setProperty('--gap', `${gap}px`);
+});
+
+</script>
+		<div class="cards-grid">
+		<a href="agata-bez-bageta.html">
+			<div class="greencard";>
+				<div class="image-container">
+					<img src="C:\Users\User\Downloads\dveri12\агата без багета.jpg" alt="Door">
+				<div class="info">ЦЕНА</div>
+				</div>
+				<div class="caption">Агата (без багета)</div>
+			</div>
+		</a>
+			<div class="greencard">
+				<div class="image-container">
+					<img src="C:\Users\User\Downloads\dveri12\амелия багет.png" alt="Door">
+				<div class="info">ЦЕНА</div>
+				</div>
+				<div class="caption">Амелия (багет)</div>
+			</div>
+			<div class="greencard">
+				<div class="image-container">
+					<img src="C:\Users\User\Downloads\dveri12\амелия без багета.jpg" alt="Door">
+					<div class="info">ЦЕНА</div>
+				</div>
+				<div class="caption">Амелия (без багета)</div>
+			</div>
+			<div class="greencard">
+				<div class="image-container">
+					<img src="C:\Users\User\Downloads\dveri12\ампир.jpg" alt="Door">
+					<div class="info">ЦЕНА</div>
+				</div>
+				<div class="caption">Ампир</div>
+			</div>
+			<div class="greencard">
+				<div class="image-container">
+					<img src="C:\Users\User\Downloads\dveri12\английская решетка.jpg" alt="Door">
+					<div class="info">ЦЕНА</div>
+				</div>
+				<div class="caption">Английская решетка</div>
+			</div>
+			<div class="greencard">
+				<div class="image-container">
+					<img src="C:\Users\User\Downloads\dveri12\блюз.png" alt="Door">
+					<div class="info">ЦЕНА</div>
+				</div>
+				<div class="caption">Блюз</div>
+			</div>
+			<div class="greencard">
+				<div class="image-container">
+					<img src="C:\Users\User\Downloads\dveri12\венеция.jpg" alt="Door">
+					<div class="info">ЦЕНА</div>
+				</div>
+				<div class="caption">Венеция</div>
+			</div>
+			<div class="greencard">
+				<div class="image-container">
+					<img src="C:\Users\User\Downloads\dveri12\верона.jpg" alt="Door">
+					<div class="info">ЦЕНА</div>
+				</div>
+				<div class="caption">Верона</div>
+			</div>
+			<div class="greencard">
+				<div class="image-container">
+					<img src="C:\Users\User\Downloads\dveri12\виктория багет.png" alt="Door">
+					<div class="info">ЦЕНА</div>
+				</div>
+				<div class="caption">Виктория (багет)</div>
+			</div>
+			<div class="greencard">
+				<div class="image-container">
+					<img src="C:\Users\User\Downloads\dveri12\виктория без багета.jpg" alt="Door">
+					<div class="info">ЦЕНА</div>
+				</div>
+				<div class="caption">Виктория (без багета)</div>
+			</div>
+			<div class="greencard">
+				<div class="image-container">
+					<img src="C:\Users\User\Downloads\dveri12\виктория 2 багет.png" alt="Door">
+					<div class="info">ЦЕНА</div>
+				</div>
+				<div class="caption">Виктория 2 (багет)</div>
+			</div>
+			<div class="greencard">
+				<div class="image-container">
+					<img src="C:\Users\User\Downloads\dveri12\виктория 2 без багета.jpg" alt="Door">
+					<div class="info">ЦЕНА</div>
+				</div>
+				<div class="caption">Виктория 2 (без багета)</div>
+			</div>
+			<div class="greencard">
+				<div class="image-container">
+					<img src="C:\Users\User\Downloads\dveri12\гамма.jpg" alt="Door">
+					<div class="info">ЦЕНА</div>
+				</div>
+				<div class="caption">Гамма</div>
+			</div>
+			<div class="greencard">
+				<div class="image-container">
+					<img src="C:\Users\User\Downloads\dveri12\греция багет.png" alt="Door">
+					<div class="info">ЦЕНА</div>
+				</div>
+				<div class="caption">Греция (багет)</div>
+			</div>
+			<div class="greencard">
+				<div class="image-container">
+					<img src="C:\Users\User\Downloads\dveri12\джулия багет.png" alt="Door">
+					<div class="info">ЦЕНА</div>
+				</div>
+				<div class="caption">Джулия (багет)</div>
+			</div>
+			<div class="greencard">
+				<div class="image-container">
+					<img src="C:\Users\User\Downloads\dveri12\джулия без багета.jpg" alt="Door">
+					<div class="info">ЦЕНА</div>
+				</div>
+				<div class="caption">Джулия (без багета)</div>
+			</div>
+			<div class="greencard">
+				<div class="image-container">
+					<img src="C:\Users\User\Downloads\dveri12\Евро.png" alt="Door">
+					<div class="info">ЦЕНА</div>
+				</div>
+				<div class="caption">Евро</div>
+			</div>
+			<div class="greencard">
+				<div class="image-container">
+					<img src="C:\Users\User\Downloads\dveri12\лотос.png" alt="Door">
+					<div class="info">ЦЕНА</div>
+				</div>
+				<div class="caption">Лотос</div>
+			</div>
+			<div class="greencard">
+				<div class="image-container">
+					<img src="C:\Users\User\Downloads\dveri12\марсель багет.jpg" alt="Door">
+					<div class="info">ЦЕНА</div>
+				</div>
+				<div class="caption">Марсель (багет)</div>
+			</div>
+			<div class="greencard">
+				<div class="image-container">
+					<img src="C:\Users\User\Downloads\dveri12\марсель без багета.jpg" alt="Door">
+					<div class="info">ЦЕНА</div>
+				</div>
+				<div class="caption">Марсель (без багета)</div>
+			</div>
+			<div class="greencard">
+				<div class="image-container">
+					<img src="C:\Users\User\Downloads\dveri12\марсель парящая.jpg" alt="Door">
+					<div class="info">ЦЕНА</div>
+				</div>
+				<div class="caption">Марсель (парящая филенка)</div>
+			</div>
+			<div class="greencard">
+				<div class="image-container">
+					<img src="C:\Users\User\Downloads\dveri12\мишель.jpg" alt="Door">
+					<div class="info">ЦЕНА</div>
+				</div>
+				<div class="caption">Мишель</div>
+			</div>
+			<div class="greencard">
+				<div class="image-container">
+					<img src="C:\Users\User\Downloads\dveri12\натали.png" alt="Door">
+					<div class="info">ЦЕНА</div>
+				</div>
+				<div class="caption">Натали</div>
+			</div>
+			<div class="greencard">
+				<div class="image-container">
+					<img src="C:\Users\User\Downloads\dveri12\омега.jpg" alt="Door">
+					<div class="info">ЦЕНА</div>
+				</div>
+				<div class="caption">Омега</div>
+			</div>
+			<div class="greencard">
+				<div class="image-container">
+					<img src="C:\Users\User\Downloads\dveri12\палермо багет.png" alt="Door">
+					<div class="info">ЦЕНА</div>
+				</div>
+				<div class="caption">Палермо (багет)</div>
+			</div>
+			<div class="greencard">
+				<div class="image-container">
+					<img src="C:\Users\User\Downloads\dveri12\палермо без багета.jpg" alt="Door">
+					<div class="info">ЦЕНА</div>
+				</div>
+				<div class="caption">Палермо (без багета)</div>
+			</div>
+			<div class="greencard">
+				<div class="image-container">
+					<img src="C:\Users\User\Downloads\dveri12\портал карниз барон.jpg" alt="Door">
+					<div class="info">ЦЕНА</div>
+				</div>
+				<div class="caption">Портал-карниз «Барон»</div>
+			</div>
+			<div class="greencard">
+				<div class="image-container">
+					<img src="C:\Users\User\Downloads\dveri12\портал карниз палермо.jpg" alt="Door">
+					<div class="info">ЦЕНА</div>
+				</div>
+				<div class="caption">Портал-карниз «Палермо»</div>
+			</div>
+			<div class="greencard">
+				<div class="image-container">
+					<img src="C:\Users\User\Downloads\dveri12\портал карниз престиж.jpg" alt="Door">
+					<div class="info">ЦЕНА</div>
+				</div>
+				<div class="caption">Портал-карниз «Престиж»</div>
+			</div>
+			<div class="greencard">
+				<div class="image-container">
+					<img src="C:\Users\User\Downloads\dveri12\портал карниз стандарт.jpg" alt="Door">
+					<div class="info">ЦЕНА</div>
+				</div>
+				<div class="caption">Портал-карниз «Стандарт»</div>
+			</div>
+			<div class="greencard">
+				<div class="image-container">
+					<img src="C:\Users\User\Downloads\dveri12\премьер 1.jpg" alt="Door">
+					<div class="info">ЦЕНА</div>
+				</div>
+				<div class="caption">Премьер 1</div>
+			</div>
+			<div class="greencard">
+				<div class="image-container">
+					<img src="C:\Users\User\Downloads\dveri12\премьер 2.jpg" alt="Door">
+					<div class="info">ЦЕНА</div>
+				</div>
+				<div class="caption">Премьер 2</div>
+			</div>
+			<div class="greencard">
+				<div class="image-container">
+					<img src="C:\Users\User\Downloads\dveri12\рио.jpg" alt="Door">
+					<div class="info">ЦЕНА</div>
+				</div>
+				<div class="caption">Рио</div>
+			</div>
+			<div class="greencard">
+				<div class="image-container">
+					<img src="C:\Users\User\Downloads\dveri12\сиена багет.png" alt="Door">
+					<div class="info">ЦЕНА</div>
+				</div>
+				<div class="caption">Сиена (багет)</div>
+			</div>
+			<div class="greencard">
+				<div class="image-container">
+					<img src="C:\Users\User\Downloads\dveri12\сиена без багета.jpg" alt="Door">
+					<div class="info">ЦЕНА</div>
+				</div>
+				<div class="caption">Сиена (без багета)</div>
+			</div>
+			<div class="greencard">
+				<div class="image-container">
+					<img src="C:\Users\User\Downloads\dveri12\сильвия без багета.jpg" alt="Door">
+					<div class="info">ЦЕНА</div>
+				</div>
+				<div class="caption">Сильвия (без багета)</div>
+			</div>
+			<div class="greencard">
+				<div class="image-container">
+					<img src="C:\Users\User\Downloads\dveri12\софия без багета.jpg" alt="Door">
+					<div class="info">ЦЕНА</div>
+				</div>
+				<div class="caption">София (без багета)</div>
+			</div>
+			<div class="greencard">
+				<div class="image-container">
+					<img src="C:\Users\User\Downloads\dveri12\стиль.png" alt="Door">
+					<div class="info">ЦЕНА</div>
+				</div>
+				<div class="caption">Стиль</div>
+			</div>
+			<div class="greencard">
+				<div class="image-container">
+					<img src="C:\Users\User\Downloads\dveri12\тюльпан.png" alt="Door">
+					<div class="info">ЦЕНА</div>
+				</div>
+				<div class="caption">Тюльпан</div>
+			</div>
+			<div class="greencard">
+				<div class="image-container">
+					<img src="C:\Users\User\Downloads\dveri12\флейта.png" alt="Door">
+					<div class="info">ЦЕНА</div>
+				</div>
+				<div class="caption">Флейта</div>
+			</div>
+			<div class="greencard">
+				<div class="image-container">
+					<img src="C:\Users\User\Downloads\dveri12\эксклюзив.png" alt="Door">
+					<div class="info">ЦЕНА</div>
+				</div>
+				<div class="caption">Эксклюзив</div>
+			</div>
+		</div>
+    </div>
+</body>
+</html>
