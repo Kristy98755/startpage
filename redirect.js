@@ -3,13 +3,13 @@ document.addEventListener("DOMContentLoaded", function() {
   var redirectUrl;
 
   if (/android/i.test(userAgent)) {
-    redirectUrl = "https://m.yourwebsite.com"; // Android
+    redirectUrl = "https://kristy98755.github.io/m.startpage/"; // Android
   } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-    redirectUrl = "https://m.yourwebsite.com"; // iOS
+    redirectUrl = "https://kristy98755.github.io/m.startpage/"; // iOS
   } else if (/Macintosh|MacIntel|MacPPC|Mac68K|Linux|Windows/.test(userAgent)) {
-    redirectUrl = "https://www.yourwebsite.com"; // Desktop OS (macOS, Linux, Windows)
+    redirectUrl = "https://kristy98755.github.io/startpage/"; // Desktop OS (macOS, Linux, Windows)
   } else {
-    redirectUrl = "https://m.yourwebsite.com"; // Other or unknown OS
+    redirectUrl = "https://kristy98755.github.io/m.startpage/"; // Other or unknown OS
   }
 
   if (redirectUrl && window.location.href !== redirectUrl) {
