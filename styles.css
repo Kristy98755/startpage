@@ -5,6 +5,54 @@
 }
 */
 
+@font-face {
+	font-family: 'Century Gothic';
+	font-weight: normal;
+	font-style: normal;
+	src:url('https://kristy98755.github.io/startpage/CenturyGothic.woff')format('woff'); 
+
+}
+
+@font-face {
+	font-family: 'Century Gothic';
+	font-weight: bold;
+    font-style: normal;
+    src:url('https://kristy98755.github.io/startpage/CenturyGothic-Bold.woff')format('woff');
+
+}
+
+@font-face {
+    font-family: 'Century Gothic';
+	font-weight: bold;
+    font-style: italic;
+    src:url('https://kristy98755.github.io/startpage/CenturyGothic-BoldItalic.woff')format('woff');
+
+}
+
+@font-face {
+    font-family: 'Century Gothic';
+	font-weight: normal;
+    font-style: italic;
+    src:url('https://kristy98755.github.io/startpage/CenturyGothic-Italic.woff')format('woff');
+
+}
+
+@font-face {
+    font-family: 'Palatino Linotype';
+	font-weight: normal;
+    font-style: normal;
+    src:url('https://kristy98755.github.io/startpage/PalatinoLinotype.woff')format('woff'); 
+
+}
+
+@font-face {
+    font-family: 'Palatino Linotype';
+	font-weight: bold;
+    font-style: normal;
+    src:url('https://kristy98755.github.io/startpage/PalatinoLinotypeBold.woff')format('woff'); 
+
+}
+
 a {
     text-decoration: none;
     color: #000;
