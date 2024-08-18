@@ -143,7 +143,7 @@ body {
     font-size: calc(1vw + 2vh + 1vmin - 5.32px);
 }
 
-.hidden-items .submunu1 .plitka {
+.hidden-items .submenu1 .plitka {
     width: 100%;
     border-right: none;
     border-left: 1px solid black;
@@ -151,7 +151,7 @@ body {
     background-color: #777700;
 }
 
-.submunu1 {
+.submenu1 {
     display: none;
     flex-direction: column;
     width: calc(100% + 3px);
@@ -162,7 +162,7 @@ body {
     z-index: 12;
 }
 
-.hidden-items .plitka:hover .submunu1 {
+.hidden-items .plitka:hover .submenu1 {
     display: flex;
 }
 
@@ -170,7 +170,7 @@ body {
     border-bottom: 1px solid black;
 }
 
-.submunu1 .plitka:last-child {
+.submenu1 .plitka:last-child {
     border-bottom: 1px solid black;
 }
 
