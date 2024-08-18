@@ -1,18 +1,17 @@
-document.addEventListener("DOMContentLoaded", function() {
-  var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-  var redirectUrl;
+// Определяем тип устройства
+const isMobile = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent);
 
-  if (/android/i.test(userAgent)) {
-    redirectUrl = "https://kristy98755.github.io/m.startpage/"; // Android
-  } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-    redirectUrl = "https://kristy98755.github.io/m.startpage/"; // iOS
-  } else if (/Macintosh|MacIntel|MacPPC|Mac68K|Linux|Windows/.test(userAgent)) {
-    redirectUrl = "https://kristy98755.github.io/startpage/"; // Desktop OS (macOS, Linux, Windows)
-  } else {
-    redirectUrl = "https://kristy98755.github.io/m.startpage/"; // Other or unknown OS
-  }
+// Получаем текущий URL
+const currentUrl = window.location.href;
 
-  if (redirectUrl && window.location.href !== redirectUrl) {
-    window.location.href = redirectUrl;
-  }
-});
+// Проверяем, является ли URL мобильной версией
+const isMobileVersion = currentUrl.includes('/m.startpage');
+
+// Проверка соответствия типа устройства и версии сайта
+if (isMobile && !isMobileVersion) {
+    // Если устройство мобильное, но версия сайта не мобильная, перенаправляем на мобильную версию
+    window.location.href = currentUrl.replace('/startpage', '/m.startpage');
+} else if (!isMobile && isMobileVersion) {
+    // Если устройство не мобильное, но версия сайта мобильная, перенаправляем на полную версию
+    window.location.href = currentUrl.replace('/m.startpage', '/startpage');
+}
