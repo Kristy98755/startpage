@@ -1,6 +1,6 @@
 const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 const url = new URL(window.location.href);
-const pathParts = url.pathname.split('/');
+let pathParts = url.pathname.replace(/\/$/, '').split('/'); // Убираем возможный завершающий "/"
 const lastPart = pathParts[pathParts.length - 1];
 
 if (isMobile && !lastPart.startsWith('m.')) {
