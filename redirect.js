@@ -11,7 +11,7 @@ function isMobileDevice() {
     }
     
     // Проверка на Linux (только если это не настольный Linux)
-    if (/Linux/.test(userAgent)) {
+    if (/Linux/.test(userAgent) && /Mobile/.test(userAgent)) {
         return true;
     }
     
@@ -39,5 +39,5 @@ function handleRedirect() {
     }
 }
 
-// Запуск функции редиректа при загрузке страницы
-window.onload = handleRedirect;
+// Выполняем редирект, когда DOM полностью загружен, но до загрузки остальных ресурсов
+document.addEventListener('DOMContentLoaded', handleRedirect);
