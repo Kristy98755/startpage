@@ -1,41 +1,43 @@
-(function() {
-    // Определяем функцию для добавления или удаления префикса "m."
-    function updatePrefix(url, prefix) {
-        // Разбиваем URL на части
-        const parts = url.split('/');
-        
-        // Проверяем и обновляем последний элемент URL, если это нужное слово
-        const lastPart = parts.pop();
-        if (lastPart === 'startpage' || lastPart === 'doors') {
-            if (prefix && !lastPart.startsWith('m.')) {
-                // Добавляем префикс "m."
-                parts.push('m.' + lastPart);
-            } else if (!prefix && lastPart.startsWith('m.')) {
-                // Убираем префикс "m."
-                parts.push(lastPart.substring(2));
-            } else {
-                // Если префикс уже присутствует или отсутствует в нужном месте, не меняем его
-                parts.push(lastPart);
-            }
-        } else {
-            parts.push(lastPart);
-        }
-        
-        // Возвращаем обновленный URL
-        return parts.join('/');
+// Массив слов, перед которыми нужно добавлять "m." для мобильных устройств
+const mobilePages = ['startpage', 'doors'];
+
+// Функция определения типа устройства
+function isMobileDevice() {
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    
+    // Проверка на Android, iOS или кнопочный телефон
+    if (/android/i.test(userAgent) || /iPad|iPhone|iPod/.test(userAgent) || /Mobile|Opera Mini/.test(userAgent)) {
+        return true;
+    }
+    
+    // Проверка на Linux (только если это не настольный Linux)
+    if (/Linux/.test(userAgent)) {
+        return true;
+    }
+    
+    // По умолчанию считать устройство мобильным, если не удалось определить тип
+    return false;
+}
+
+// Основная функция для редиректа
+function handleRedirect() {
+    const currentUrl = window.location.pathname; // Текущий путь без домена
+    const isMobile = isMobileDevice(); // Определяем тип устройства
+    let newUrl = currentUrl.replace(/\/m\./g, '/'); // Убираем "/m."
+
+    // Если устройство мобильное, добавляем "m." перед нужными страницами
+    if (isMobile) {
+        mobilePages.forEach(page => {
+            const regex = new RegExp(`/${page}`, 'g');
+            newUrl = newUrl.replace(regex, `/m.${page}`);
+        });
     }
 
-    // Получаем текущий URL
-    const currentUrl = window.location.href;
-
-    // Определяем, должен ли быть префикс "m."
-    const prefix = (navigator.userAgent.match(/Android|iPhone|iPad|iPod|Mobile/) != null);
-
-    // Обновляем URL в зависимости от префикса
-    const newUrl = updatePrefix(currentUrl, prefix);
-
-    // Если URL изменился, перенаправляем
-    if (newUrl !== currentUrl) {
-        window.location.href = newUrl;
+    // Если текущий URL отличается от рассчитанного, перенаправляем
+    if (currentUrl !== newUrl) {
+        window.location.pathname = newUrl;
     }
-})();
+}
+
+// Запуск функции редиректа при загрузке страницы
+window.onload = handleRedirect;
