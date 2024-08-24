@@ -83,7 +83,7 @@ body {
     font-family: Palatino Linotype;
     font-size: 4vw;
     text-shadow: -1px -1px 0 #DDD, 1px -1px 0 #DDD, -1px 1px 0 #DDD, 1px 1px 0 #DDD;
-	margin: 10px 0;
+	margin: 10px auto;
 }
 
 .toolbar {
