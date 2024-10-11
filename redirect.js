@@ -1,22 +1,13 @@
 // Массив слов, перед которыми нужно добавлять "m." для мобильных устройств
 const mobilePages = ['startpage', 'doors'];
 
-// Функция определения типа устройства
+// Функция определения типа устройства на основе соотношения ширины и высоты окна
 function isMobileDevice() {
-    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-    
-    // Проверка на Android, iOS или кнопочный телефон
-    if (/android/i.test(userAgent) || /iPad|iPhone|iPod/.test(userAgent) || /Mobile|Opera Mini/.test(userAgent)) {
-        return true;
-    }
-    
-    // Проверка на Linux (только если это не настольный Linux)
-    if (/Linux/.test(userAgent) && /Mobile/.test(userAgent)) {
-        return true;
-    }
-    
-    // По умолчанию считать устройство мобильным, если не удалось определить тип
-    return false;
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    // Если высота больше ширины, считаем устройство мобильным
+    return height > width;
 }
 
 // Основная функция для редиректа
@@ -39,5 +30,5 @@ function handleRedirect() {
     }
 }
 
-// Выполняем редирект, когда DOM полностью загружен, но до загрузки остальных ресурсов
+// Выполняем редирект, когда DOM полностью загружен
 document.addEventListener('DOMContentLoaded', handleRedirect);
